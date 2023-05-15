@@ -4,7 +4,9 @@ import getComponentState from './methods/getComponentState';
 import noop from '../../core/methods/noop';
 import { ButtonContainer, CustomLabel } from './styled';
 
-const Button = ({ label, variantType, variantColor, isDisabled, onClick }) => {
+const Button = ({
+  label, variantType, variantColor, isDisabled, onClick,
+}) => {
   const [isHover, setIsHover] = useState(false);
   const state = getComponentState({ isHover, isDisabled });
 
@@ -22,7 +24,8 @@ const Button = ({ label, variantType, variantColor, isDisabled, onClick }) => {
       <CustomLabel
         variantType={variantType}
         variantColor={variantColor}
-        state={state}>
+        state={state}
+      >
         {label}
       </CustomLabel>
     </ButtonContainer>

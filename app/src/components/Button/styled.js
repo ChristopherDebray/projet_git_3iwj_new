@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 
 export const ButtonContainer = styled.button`
-  ${({ theme, variantType, variantColor, state }) => {
-    console.log(theme)
-    console.log(theme.buttonTheme[variantType][variantColor][state].borderColor)
-    return `
+  ${({
+    theme, variantType, variantColor, state,
+  }) => `
     all: unset;
     padding: 7px 24px;
     font-weight: 700;
@@ -13,11 +12,13 @@ export const ButtonContainer = styled.button`
     border: 2px solid;
     border-color: ${theme.buttonTheme[variantType][variantColor][state].borderColor};
     background-color: ${theme.buttonTheme[variantType][variantColor][state].backgroundColor};
-  `}}
+  `
+}
 `;
 
 export const CustomLabel = styled.span`
-  ${({ theme, variantType, variantColor, state }) =>
-    `color: ${theme.buttonTheme[variantType][variantColor][state].color};`
-  }
+  ${({
+    theme, variantType, variantColor, state,
+  }) => `color: ${theme.buttonTheme[variantType][variantColor][state].color};`
+}
 `;

@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CustomImage } from './styled';
 
-const Image = ({ imgSrc, variantBorder, alt }) => {
-  return <CustomImage src={imgSrc} variantBorder={variantBorder} alt={alt} />;
-};
+// eslint-disable-next-line max-len
+const Image = ({ imgSrc, variantBorder, alt }) => <CustomImage src={imgSrc} variantBorder={variantBorder} alt={alt} />;
 
 Image.propTypes = {
   /**
