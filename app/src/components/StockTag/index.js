@@ -2,17 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, CustomLabel } from './styled';
 
-const StockTag = ({ stockValue, stockUnit }) => {
-  return (
-    <Container>
-      <CustomLabel
-        variant="labelSmall"
-        htmlTag="p"
-      />
-      {`${stockValue}${stockUnit} disponibles`}
-    </Container>
-  );
-};
+const StockTag = ({ stockValue, stockUnit }) => (
+  <Container>
+    <CustomLabel
+      variant="labelSmall"
+      htmlTag="p"
+    />
+    {`${stockValue}${stockUnit} disponibles`}
+  </Container>
+);
 
 StockTag.propTypes = {
   /**
