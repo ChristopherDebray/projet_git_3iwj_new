@@ -29,17 +29,12 @@ jobs:
 
       - name: Install ESLint
         run: |
-          npm install eslint@8.10.0
-          npm install eslint-plugin-react@latest --save-dev
-          npm install eslint-config-airbnb --save-dev
-          npm install eslint-plugin-import --save-dev
-          npm install eslint-plugin-jsx-a11y --save-dev
-          npm install eslint-plugin-react --save-dev
-          npm install eslint-plugin-react-hooks --save-dev
-          npm install @microsoft/eslint-formatter-sarif@2.1.7
+          cd app
+          yarn
+          yarn add @microsoft/eslint-formatter-sarif@2.1.7
 
       - name: Run ESLint
-        run: npx eslint .
+        run: yarn eslint .
           --config app/.eslintrc.js
           --ext .js,.jsx,.ts,.tsx
           --format @microsoft/eslint-formatter-sarif
