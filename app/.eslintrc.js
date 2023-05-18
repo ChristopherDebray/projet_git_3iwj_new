@@ -19,6 +19,7 @@ module.exports = {
     'react-hooks',
   ],
   rules: {
+    'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off', // Disables warning for extraneous dependencies.
     'react/prop-types': 'warn', // Enables warning for prop types.
     'no-console': 'warn', // Enables warning for console calls.
