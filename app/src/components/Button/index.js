@@ -9,7 +9,6 @@ const Button = ({
 }) => {
   const [isHover, setIsHover] = useState(false);
   const state = getComponentState({ isHover, isDisabled });
-  const toto = 'test';
 
   return (
     <ButtonContainer
