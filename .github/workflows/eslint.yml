@@ -29,17 +29,21 @@ jobs:
 
       - name: Install ESLint
         run: |
-          cd app
-          yarn
-          yarn add @microsoft/eslint-formatter-sarif@2.1.7
+          npm install eslint@8.10.0
+          npm install eslint-plugin-react@latest --save-dev
+          npm install eslint-config-airbnb --save-dev
+          npm install eslint-plugin-import --save-dev
+          npm install eslint-plugin-jsx-a11y --save-dev
+          npm install eslint-plugin-react --save-dev
+          npm install eslint-plugin-react-hooks --save-dev
+          npm install @microsoft/eslint-formatter-sarif@2.1.7
 
       - name: Run ESLint
-        run: cd app 
-          yarn eslint .
+        run: npx eslint .
           --config app/.eslintrc.js
           --ext .js,.jsx,.ts,.tsx
           --format @microsoft/eslint-formatter-sarif
-          --output-file ../eslint-results.sarif
+          --output-file eslint-results.sarif
         continue-on-error: true
 
       - name: Upload analysis results to GitHub
